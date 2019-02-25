@@ -38,7 +38,13 @@ def initRoute(app):
         rows = searchInAppstore( info )
         print(rows)
         if not rows:
-            rows = "으아앙" 
+            rows = "{}" 
         return render_template("search2.html", rows= rows)
+        
+    @app.route('/chart', methods=['POST'])
+    def chart():
+        info = dict()
+        info['category'] = request.form.get('category')
+        return render_template("chart.html", info= info)
     if __name__ == '__main__':
         app.run(debug=True)

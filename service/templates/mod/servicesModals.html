@@ -11,7 +11,7 @@
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">Goolge Playstore & Apple Store Analysi</h2>
+                            <h2 class="text-uppercase">Goolge Playstore & Apple Store Analysis</h2>
                             <p class="item-intro text-muted">플레이스토어 & 앱스토어 분석</p>
                             <img class="img-fluid d-block mx-auto" src="/static/img/googlevsapple.jpg" alt="" width = 60%>
                             <p>Kaggle에 있는 Google Playstore와 Applestore Data를 이용하여, 데이터 결측치 처리 및 변수 변환 등 데이터를 전처리한 뒤 시각화함으로써 플레이스토어와 애플스토어의 변수별 다운로드 수를 종족변수로하여 변수 별로 비교, 분석합니다.</p>
@@ -45,9 +45,8 @@
                             <!-- Project Details Go Here -->
                             <h2 class="text-uppercase">Prediction Model</h2>
                             <p class="item-intro text-muted">예측 모델</p>
-                            <img class="img-fluid d-block mx-auto" src=""
-                                alt="" width=60%>
-                            <p></p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/predict.jpg" alt="" width = 60%>
+                            <p>전처리한 변수들을 바탕으로 평점 예측 모델과 다운로드 수 예측 모델을 만들었습니다. Machine learning에서 필요한 scikit-learn(사이킷런) 라이브러리를 바탕으로 로지스틱 회귀모형, KNN, decision tree, random forest를 이용해 모델을 수립하였습니다. 모델 수립 후, K-fold 교차 검증을 활용하여 정확도의 평균을 구하고 가장 정확도가 높은 모델을 대표 모델로 선정한 뒤 실제로 예측합니다.</p>
                             <ul class="list-inline">
                                 <li>Date: 2019.02.26</li>
                                 <li>Client: Grouop C</li>
@@ -76,15 +75,15 @@
                     <div class="col-lg-8 mx-auto">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2 class="text-uppercase">3</h2>
-                            <p class="item-intro text-muted">3</p>
-                            <img class="img-fluid d-block mx-auto" src=""
-                                alt="" width=60%>
-                            <p>플레이스토어와 앱스토어</p>
+                            <h2 class="text-uppercase">REVIEW ANALYSIS</h2>
+                            <p class="item-intro text-muted">리뷰 분석</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/review_analysis.jpg" alt="" width = 60%>
+
+                            <p>Kaggle에 있는 google play store review data를 이용하여 각 카테고리 별로 positive 리뷰와 negative 리뷰를 분석하고, 가장 많은 빈도수를 보이는 단어들을 그래프를 통해 보여줍니다.</p>
                             <ul class="list-inline">
-                                <li>Date: January 2017</li>
-                                <li>Client: Threads</li>
-                                <li>Category : installs</li>
+                                <li>Date: 2019.02.26</li>
+                                <li>Client: Grouop C</li>
+                                <li>Category : Review Analysis</li>
                             </ul>
                             <button class="btn btn-primary" data-dismiss="modal" type="button">
                                 <i class="fas fa-times"></i>
@@ -258,6 +257,73 @@
                                 <li>Date: 2019.02.26</li>
                                 <li>Client: Group C</li>
                                 <li>Category : Filtering</li>
+                            </ul>
+                            <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                <i class="fas fa-times"></i>
+                                Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="serviceModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2 class="text-uppercase">Search in Category</h2>
+                            <p class="item-intro text-muted">카테고리 별 단어 빈도수</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/modals_chart.png" alt="" width = 80%>
+                            <div class="card-body">
+                                <form action = '/chart' method="POST"  target=_blank>
+                                    <select name='category' class="form-control form-control-sm">
+                                        <option value='FAMILY'>카테고리 선택</option>
+                                        <option value='FAMILY'>가족</option>
+                                        <option value='FINANCE'>금융</option>
+                                        <option value='FOOD_AND_DRINK'>식/음료</option>
+                                        <option value='GAME'>게임</option>
+                                        <option value='HEALTH_AND_FITNESS'>생활/건강</option>
+                                        <option value='HOUSE_AND_HOME'>부동산</option>
+                                        <option value='LIBRARIES_AND_DEMO'>라이브러리 및 데모</option>
+                                        <option value='LIFESTYLE'>생활습관</option>
+                                        <option value='MAPS_AND_NAVIGATION'>지도</option>
+                                        <option value='MEDICAL'>의학</option>
+                                        <option value='NEWS_AND_MAGAZINES'>뉴스 및 잡지</option>
+                                        <option value='PARENTING'>육아</option>
+                                        <option value='PERSONALIZATION'>개인</option>
+                                        <option value='PHOTOGRAPHY'>사진</option>
+                                        <option value='PRODUCTIVITY'>생산성</option>
+                                        <option value='SHOPPING'>쇼핑</option>
+                                        <option value='SOCIAL'>사회</option>
+                                        <option value='SPORTS'>스포츠</option>
+                                        <option value='TOOLS'>도구</option>
+                                        <option value='TRAVEL_AND_LOCAL'>여행</option>
+                                        <option value='VIDEO_PLAYERS'>동영상</option>
+                                        <option value='WEATHER'>날씨</option>
+                                    </select>
+                                    <br/>
+                                    <button class="btn btn-primary btn-icon-split">
+                                            <span class="text">전송</span>
+                                    </button>
+                                </form>
+                            </div>
+                            <img class="img-fluid d-block mx-auto" src=""
+                                alt="" width=60%>
+                            <p>플레이스토어 리뷰 분석</p>
+                            <ul class="list-inline">
+                                <li>Date: 2019.02.26</li>
+                                <li>Client: Group C</li>
+                                <li>Category : Word Chart and Cloud</li>
                             </ul>
                             <button class="btn btn-primary" data-dismiss="modal" type="button">
                                 <i class="fas fa-times"></i>
