@@ -1,0 +1,42 @@
+<div class="card-body">
+    <div class="table-responsive">
+        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+
+            <div class="row">
+                <div class="col-sm-12" >
+                    <table border = "1" class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0"
+                        role="grid" aria-describedby="dataTable_info" style="width: 80%;">
+                        <thead >
+                            <tr role="row" >
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                aria-label="Age: activate to sort column ascending" style="width: 120px;">Rating</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-sort="ascending" aria-label="Name: activate to sort column descending"
+                                    style="width: 50px;">App</th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Position: activate to sort column ascending" style="width: 127px;">Category
+                                </th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Office: activate to sort column ascending" style="width: 120px;">Content Rating</th>
+                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1"
+                                    aria-label="Start date: activate to sort column ascending" style="width: 120px;">Type
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            {% for row in rows: %}
+                            <tr role="row" class="odd">
+                                <td>{{ row.get('Rating') }}</td>
+                                <td>{{ row.get('App') }}</td>
+                                <td>{{ row.get('Category') }}</td>
+                                <td>{{ row.get('Content Rating') }}</td>
+                                <td>{{ row.get('Type') }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
