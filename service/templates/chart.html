@@ -13,9 +13,18 @@
                             <!-- Project Details Go Here -->
                             <h2 class="text-uppercase">Word Chart Based {{info.get('category')}}</h2>
                             <p class="item-intro text-muted">{{info.get('category')}}의 빈도수</p>
-                            <img class="img-fluid d-block mx-auto" src="/static/img/googlevs{{'category'}}.jpg" alt="" width = 50%>
-                            <p>Word Cloud Based {{info.get('category')}}</p>
-                            <img class="img-fluid d-block mx-auto" src="/static/img/googlevs{{'category'}}.jpg" alt="" width = 50%>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_POS.png" alt="" width = 50%>
+                            <p>Positive Word Cloud Based {{info.get('category')}}</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_NEU.png" alt="" width = 50%>
+                            <p>Neutual Word Cloud Based {{info.get('category')}}</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_NEG.png" alt="" width = 50%>
+                            <p>Negative Word Cloud Based {{info.get('category')}}</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_POS_C.png" alt="" width = 40%>
+                            <p>PositiveWord Chart Based {{info.get('category')}}</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_NEU_C.png" alt="" width = 40%>
+                            <p>Neutual Word Chart Based {{info.get('category')}}</p>
+                            <img class="img-fluid d-block mx-auto" src="/static/img/chart/{{info.get('category')}}_NEG_C.png" alt="" width = 40%>
+                            <p>Negative Word Chart Based {{info.get('category')}}</p>
                         </div>
                     </div>
                 </div>
