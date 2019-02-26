@@ -48,3 +48,8 @@ def initRoute(app):
         return render_template("chart.html", info= info)
     if __name__ == '__main__':
         app.run(debug=True)
+    @app.route('/predict')
+    def predict():
+        return render_template("predictionModel.html")
+    if __name__ == '__main__':
+        app.run(debug=True)
