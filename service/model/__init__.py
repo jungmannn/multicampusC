@@ -7,7 +7,7 @@ def insertBbsData( data ):
     db_session   = None
     affected_row = 0 # 영향을 받은 로의 수
     try:    
-        db_session = sql.connect( host='localhost',
+        db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
                                 user='root',
                                 password='12341234',
                                 db='local_db',
@@ -42,7 +42,7 @@ def searchInPlaystore(info):
     db_session   = None
     rows = None # 영향을 받은 로의 수
     try:    
-        db_session = sql.connect( host='localhost',
+        db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
                                 user='root',
                                 password='12341234',
                                 db='local_db',
@@ -80,7 +80,7 @@ def searchInAppstore(info):
     db_session   = None
     rows = None # 영향을 받은 로의 수
     try:    
-        db_session = sql.connect( host='localhost',
+        db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
                                 user='root',
                                 password='12341234',
                                 db='local_db',
