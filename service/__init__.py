@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, make_response, jsonify
-from service.model import insertBbsData, searchInPlaystore, searchInAppstore
+from service.model import searchInPlaystore, searchInAppstore
 import os 
 
 def createApp():
