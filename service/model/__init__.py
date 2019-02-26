@@ -1,6 +1,4 @@
 import pymysql as sql
-import pickle
-from xgboost import XGBClassifier
 import numpy as np
 
 def insertBbsData( data ):
@@ -65,17 +63,6 @@ def searchInPlaystore(info):
             db_session.close()
             print('디비접속해제성공')
         return rows
-
-def RatingPredictionModel(data):
-    with open('service/model/model7.dat', 'rb') as fp:
-        model = pickle.load(fp)
-    
-    y2_pred = model.predict(data)
-
-    for r in y2_pred:
-        print(r)
-    return y2_pred
-
 def searchInAppstore(info):
     db_session   = None
     rows = None # 영향을 받은 로의 수
