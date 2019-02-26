@@ -1,40 +1,6 @@
 import pymysql as sql
 
-def insertBbsData( data ):
-    db_session   = None
-    affected_row = 0 # 영향을 받은 로의 수
-    try:    
-        db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
-                                user='root',
-                                password='12341234',
-                                db='local_db',
-                                charset='utf8',
-                                cursorclass=sql.cursors.DictCursor)
-        
-        with db_session.cursor() as cursor:
-            sql_str = '''
-                insert into tbl_contact
-                (name, `email`, phone, message)
-                values
-                (%s,%s,%s,%s);
-            '''
-            cursor.execute( sql_str,
-              (
-                  data.get('name'),
-                  data.get('email'),
-                  data.get('phone'),
-                  data.get('message')
-              ) )
-        # 실제 반영 => commit()
-        db_session.commit()
-        affected_row = db_session.affected_rows()
-    except Exception as e:
-        print( e )
-    finally:    
-        if db_session:
-            db_session.close()            
-    # 영향을 받은 로의 수를 반환
-    return affected_row
+
 def searchInPlaystore(info):
     db_session   = None
     rows = None # 영향을 받은 로의 수
@@ -42,7 +8,7 @@ def searchInPlaystore(info):
         db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
                                 user='root',
                                 password='12341234',
-                                db='local_db',
+                                db='python_db',
                                 charset='utf8',
                                 cursorclass=sql.cursors.DictCursor)
         
@@ -69,7 +35,7 @@ def searchInAppstore(info):
         db_session = sql.connect( host='python-db.c98cjif9str0.ap-northeast-2.rds.amazonaws.com',
                                 user='root',
                                 password='12341234',
-                                db='local_db',
+                                db='python_db',
                                 charset='utf8',
                                 cursorclass=sql.cursors.DictCursor)
         
