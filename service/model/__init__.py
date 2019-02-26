@@ -1,5 +1,4 @@
 import pymysql as sql
-import numpy as np
 
 def insertBbsData( data ):
     db_session   = None
